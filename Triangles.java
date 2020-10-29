@@ -6,6 +6,13 @@ public class Triangles{
     v2 = Point(x2, y2);
     v3 = Point(x3, y3);
   }
+
+  public Triangle(Point a, Point b, Point c){
+    v1 = a;
+    v2 = b;
+    v3 = c;
+  }
+
   //accessors
   public double getPerimeter(){
 
