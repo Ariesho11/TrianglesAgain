@@ -27,7 +27,15 @@ public class Triangle{
   }
 
   public String classify(){
-    return "string";
+    double s1 = v1.distanceTo(v2);;
+    double s2 = v2.distanceTo(v3);
+    double s3 = v3.distanceTo(v1);
+    String id = "";
+
+    if ((s1 == s2) && (s2 == s3)) id = "equilateral";
+    else if (((s2 == s3) || (s1 == s2)) || (s1 == s3)) id = "isosceles";
+    else id = "scalene";
+    return id;
   }
 
   public String toString(){
