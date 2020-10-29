@@ -23,13 +23,13 @@ public class Triangle{
     double d1 = v1.distanceTo(v2);
     double d2 = v2.distanceTo(v3);
     double d3 = v3.distanceTo(v1);
-    return Math.sqrt(sp*(sp-d1)*(sp-s2)*(sp-s3));
+    return Math.sqrt(sp*(sp-d1)*(sp-d2)*(sp-d3));
   }
 
   public String classify(){
-    double s1 = v1.distanceTo(v2);;
-    double s2 = v2.distanceTo(v3);
-    double s3 = v3.distanceTo(v1);
+    double s1 = Math.round(v1.distanceTo(v2) * 10000.0)/10000.0;
+    double s2 = Math.round(v2.distanceTo(v3) * 10000.0)/10000.0;
+    double s3 = Math.round(v1.distanceTo(v3) * 10000.0)/10000.0;
     String id = "";
 
     if ((s1 == s2) && (s2 == s3)) id = "equilateral";
