@@ -19,7 +19,11 @@ public class Triangle{
   }
 
   public double getArea(){
-    return 0.00;
+    double sp = ((v1.distanceTo(v2) + v2.distanceTo(v3) + v3.distanceTo(v1))/2);
+    double d1 = v1.distanceTo(v2);
+    double d2 = v2.distanceTo(v3);
+    double d3 = v3.distanceTo(v1);
+    return Math.sqrt(sp*(sp-d1)*(sp-s2)*(sp-s3));
   }
 
   public String classify(){
