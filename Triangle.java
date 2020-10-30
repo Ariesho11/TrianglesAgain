@@ -39,7 +39,7 @@ public class Triangle{
   }
 
   public String toString(){
-    return "string";
+    return "v1(" + v1.x + ", " + v1.y + " v2(" + v1.x + ", " + v1.y + " v1(" + v1.x + ", " + v1.y;
   }
   //mutator
   public void setVertex(int index, Point newP){
